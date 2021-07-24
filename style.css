@@ -1,0 +1,51 @@
+* {
+  /* position: relative; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input {
+  display: none;
+}
+
+label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 30px;
+  width: 30px;
+  background-color: green;
+  border-radius: 50%;
+  transition: all 1s ease;
+}
+label:hover {
+  background-color: darkred;
+}
+
+#myBox {
+  position: absolute;
+  top: 80px;
+  left: 30px;
+  background-color: black;
+  height: 150px;
+  width: 150px;
+  border: darkorange 10px solid;
+  transition: all 1s ease;
+}
+
+input:checked label {
+  background-color: red;
+  border-radius: 10%;
+}
+
+input:checked ~ #myBox {
+  width: 300px;
+  background-color: blueviolet;
+  border: cyan 5px solid;
+  left: 100px;
+  border-radius: 50%;
+  transform: rotate(180deg);
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
